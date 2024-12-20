@@ -66,7 +66,7 @@ btnBebidas.addEventListener("click", () => {
     opcoesMenu1.style.background = "none" // Muda de cor das Pizzas no menu
     opcoesMenu2.style.background = "none" // Muda a cor das Porções no menu
     opcoesMenu3.style.background = "#640808" // Muda a cor das Bebidas no menu
-    opcoesMenu4.style.background = "none" // Muda a cor dos outros no menu
+    opcoesMenu4.style.background = "none" // Muda a cor dos outros no menuqq
 
     if (quadradoBebidas.style.display == "none") {
         quadradoBebidas.style.display = "flex"
