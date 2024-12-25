@@ -4,7 +4,7 @@
     --fonte-principal: "Rubik", sans-serif;
 }
 
-@media (min-width: 320px) and (max-width: 379px) {
+@media (min-width: 320px) and (max-width: 430px) {
 
     #imagemMenor {
         width: 3rem !important;
@@ -329,7 +329,7 @@
 
 }
 
-@media (min-width: 380px) and (max-width: 840px) {
+@media (min-width: 430px) and (max-width:767px) {
 
     #imagemMenor {
         width: 3rem !important;
@@ -654,7 +654,653 @@
 
 }
 
-@media screen and (min-width: 841px) {
+@media (min-width: 768px) and (max-width:1280px) {
+    body {
+        background: #b71c1c;
+        background: -webkit-linear-gradient(45deg, #b71c1c 0%, #c63535 50%, #ff0000 100%);
+        background: linear-gradient(45deg, #b71c1c 0%, #c63535 50%, #ff0000 100%);
+        background-repeat: no-repeat;
+        height: 98vh;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    #banner { /* Banner */
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 15rem;
+        background: #00000040;
+        box-shadow: 0 8px 32px 0 #1f26875e;
+        backdrop-filter: blur( 2px );
+        -webkit-backdrop-filter: blur( 2px );
+        border-radius: 10px;
+        text-align: center;
+        align-items: center;
+    }
+
+    #Logo { /* Logo */
+        margin: 1rem auto 0;
+        border-radius: 50%;
+    }
+
+    #quadradoTexto { /* Texto banner */
+        width: 100%;
+    }
+
+    #quadradoTexto h1 {
+        font-size: 15pt;
+        font-family: var(--fonte-principal);
+        color: #fff;
+    }
+
+    
+    #menu { /* Menu */
+        width: 100%;
+        height: 3rem;
+        display: flex;
+        flex-direction: row;
+        margin-top: 1rem;
+        background: #00000040;
+        box-shadow: 0 8px 32px 0 #1f26875e;
+        backdrop-filter: blur( 2px );
+        -webkit-backdrop-filter: blur( 2px );
+        border-radius: 10px;
+    }
+
+    #opcoesMenu { /* Opções do menu */
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    
+    .opcoesMenu4 p {
+        margin: 10px 0 0 0;
+    }
+
+    #opcoesMenu p {
+        font-family: var(--fonte-principal);
+        color: #fff;
+        font-size: 12pt;
+        font-weight: 600;
+    }
+
+    
+    /* CLASSE SELECIONADO MENU */
+
+    .opcoesMenu1 {
+        width: 100%;
+        height: 100%;
+        background: #640808;
+        border-radius: 10px 0 0 10px;
+        transition: all 1s ease;
+    }
+
+    .opcoesMenu2, .opcoesMenu3, .opcoesMenu4 {
+        transition: all 1s ease;
+    }
+
+        /* FIM CLASSE SELECIONADO MENU */
+
+    /* Pizza */
+    #pizza {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 60vh;
+        background: #00000040;
+        box-shadow: 0 8px 32px 0 #1f26875e;
+        backdrop-filter: blur( 2px );
+        -webkit-backdrop-filter: blur( 2px );
+        border-radius: 10px;
+        margin-top: 1rem;
+    }
+
+    #quadradoPizza {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        height: 25%;
+    }
+
+    #imagemPizza {
+        display: flex;
+        width: 25%;
+        height: 100%;
+    }
+
+    #imagemPizza img {
+        width: 7rem;
+        height: 7rem;
+        margin: auto;
+    }
+
+    #textoPizza {
+        width: 60%;
+        height: 100%;
+        text-align: center;
+        margin:  2rem auto 0;
+    }
+    
+    #textoPizza h1 {
+        font-family: var(--fonte-principal);
+        font-size: 13pt;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    #textoPizza p {
+        font-family: var(--fonte-principal);
+        font-size: 10pt;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    /* FIM PIZZA 1 */
+    /* Porções */
+
+    #porcoes {
+        display: none;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 60vh;
+        background: #00000040;
+        box-shadow: 0 8px 32px 0 #1f26875e;
+        backdrop-filter: blur( 2px );
+        -webkit-backdrop-filter: blur( 2px );
+        border-radius: 10px;
+        margin-top: 1rem;
+    }
+
+    #quadradoPorcoes {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        height: 25%;
+    }
+
+    #imagemPorcoes {
+        display: flex;
+        width: 25%;
+        height: 100%;
+    }
+
+    #imagemPorcoes img {
+        width: 7rem;
+        height: 7rem;
+        margin: auto;
+    }
+
+    #textoPorcoes {
+        width: 60%;
+        height: 100%;
+        text-align: center;
+        margin:  2rem auto 0;
+    }
+    
+    #textoPorcoes h1 {
+        font-family: var(--fonte-principal);
+        font-size: 13pt;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    #textoPorcoes p {
+        font-family: var(--fonte-principal);
+        font-size: 10pt;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    /* FIM PORÇÕES */
+
+    /* BEBIDAS */
+    
+    #bebidas {
+        display: none;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 60vh;
+        background: #00000040;
+        box-shadow: 0 8px 32px 0 #1f26875e;
+        backdrop-filter: blur( 2px );
+        -webkit-backdrop-filter: blur( 2px );
+        border-radius: 10px;
+        margin-top: 1rem;
+    }
+
+    #quadradoBebidas {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        height: 25%;
+    }
+
+    #imagemBebidas {
+        display: flex;
+        width: 25%;
+        height: 100%;
+    }
+
+    #imagemBebidas img {
+        width: 8rem;
+        height: 8rem;
+        margin: auto;
+    }
+
+    #textoBebidas {
+        width: 60%;
+        height: 100%;
+        text-align: center;
+        margin:  2rem auto 0;
+    }
+    
+    #textoBebidas h1 {
+        font-family: var(--fonte-principal);
+        font-size: 13pt;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    #textoBebidas p {
+        font-family: var(--fonte-principal);
+        font-size: 10pt;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    /* FIM BEBIDAS */
+
+    /* AÇAI SORVETE */
+    #outros {
+        display: none;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 60vh;
+        background: #00000040;
+        box-shadow: 0 8px 32px 0 #1f26875e;
+        backdrop-filter: blur( 2px );
+        -webkit-backdrop-filter: blur( 2px );
+        border-radius: 10px;
+        margin-top: 1rem;
+    }
+
+    #quadradoOutros {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        height: 25%;
+    }
+
+    #imagemOutros {
+        display: flex;
+        width: 25%;
+        height: 100%;
+    }
+
+    #imagemOutros img {
+        width: 7rem;
+        height: 7rem;
+        margin: auto;
+    }
+
+    #textoOutros {
+        width: 60%;
+        height: 100%;
+        text-align: center;
+        margin:  2rem auto 0;
+    }
+    
+    #textoOutros h1 {
+        font-family: var(--fonte-principal);
+        font-size: 13pt;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    #textoOutros p {
+        font-family: var(--fonte-principal);
+        font-size: 10pt;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+}
+
+@media (min-width: 1281px) and (max-width:2048px) {
+    body {
+        background: #b71c1c;
+        background: -webkit-linear-gradient(45deg, #b71c1c 0%, #c63535 50%, #ff0000 100%);
+        background: linear-gradient(45deg, #b71c1c 0%, #c63535 50%, #ff0000 100%);
+        background-repeat: no-repeat;
+        height: 98vh;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    #banner { /* Banner */
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 15rem;
+        background: #00000040;
+        box-shadow: 0 8px 32px 0 #1f26875e;
+        backdrop-filter: blur( 2px );
+        -webkit-backdrop-filter: blur( 2px );
+        border-radius: 10px;
+        text-align: center;
+        align-items: center;
+    }
+
+    #Logo { /* Logo */
+        margin: 1rem auto 0;
+        border-radius: 50%;
+    }
+
+    #quadradoTexto { /* Texto banner */
+        width: 100%;
+    }
+
+    #quadradoTexto h1 {
+        font-size: 15pt;
+        font-family: var(--fonte-principal);
+        color: #fff;
+    }
+
+    
+    #menu { /* Menu */
+        width: 100%;
+        height: 3rem;
+        display: flex;
+        flex-direction: row;
+        margin-top: 1rem;
+        background: #00000040;
+        box-shadow: 0 8px 32px 0 #1f26875e;
+        backdrop-filter: blur( 2px );
+        -webkit-backdrop-filter: blur( 2px );
+        border-radius: 10px;
+    }
+
+    #opcoesMenu { /* Opções do menu */
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    
+    .opcoesMenu4 p {
+        margin: 14px 0 0 0;
+    }
+
+    #opcoesMenu p {
+        font-family: var(--fonte-principal);
+        color: #fff;
+        font-size: 12pt;
+        font-weight: 600;
+    }
+
+    
+    /* CLASSE SELECIONADO MENU */
+
+    .opcoesMenu1 {
+        width: 100%;
+        height: 100%;
+        background: #640808;
+        border-radius: 10px 0 0 10px;
+        transition: all 1s ease;
+    }
+
+    .opcoesMenu2, .opcoesMenu3, .opcoesMenu4 {
+        transition: all 1s ease;
+    }
+
+        /* FIM CLASSE SELECIONADO MENU */
+
+    /* Pizza */
+    #pizza {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 55vh; /* */
+        background: #00000040;
+        box-shadow: 0 8px 32px 0 #1f26875e;
+        backdrop-filter: blur( 2px );
+        -webkit-backdrop-filter: blur( 2px );
+        border-radius: 10px;
+        margin-top: 1rem;
+    }
+
+    #quadradoPizza {
+        display: flex;
+        flex-direction: row;
+        width: 50%; /* */
+        height: 25%;
+    }
+
+    #imagemPizza {
+        display: flex;
+        width: 25%;
+        height: 100%;
+    }
+
+    #imagemPizza img {
+        width: 5rem; /* */
+        height: 5rem; /* */
+        margin: auto;
+    }
+
+    #textoPizza {
+        width: 60%;
+        height: 100%;
+        text-align: center;
+    }
+    
+    #textoPizza h1 {
+        font-family: var(--fonte-principal);
+        font-size: 12pt; /* */
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    #textoPizza p {
+        font-family: var(--fonte-principal);
+        font-size: 10pt;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    /* FIM PIZZA 1 */
+    /* Porções */
+
+    #porcoes {
+        display: none;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 55vh;
+        background: #00000040;
+        box-shadow: 0 8px 32px 0 #1f26875e;
+        backdrop-filter: blur( 2px );
+        -webkit-backdrop-filter: blur( 2px );
+        border-radius: 10px;
+        margin-top: 1rem;
+    }
+
+    #quadradoPorcoes {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        height: 25%;
+    }
+
+    #imagemPorcoes {
+        display: flex;
+        width: 25%;
+        height: 100%;
+    }
+
+    #imagemPorcoes img {
+        width: 5rem;
+        height: 5rem;
+        margin: auto;
+    }
+
+    #textoPorcoes {
+        width: 60%;
+        height: 100%;
+        text-align: center;
+    }
+    
+    #textoPorcoes h1 {
+        font-family: var(--fonte-principal);
+        font-size: 12pt;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    #textoPorcoes p {
+        font-family: var(--fonte-principal);
+        font-size: 10pt;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    /* FIM PORÇÕES */
+
+    /* BEBIDAS */
+    
+    #bebidas {
+        display: none;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 55vh;
+        background: #00000040;
+        box-shadow: 0 8px 32px 0 #1f26875e;
+        backdrop-filter: blur( 2px );
+        -webkit-backdrop-filter: blur( 2px );
+        border-radius: 10px;
+        margin-top: 1rem;
+    }
+
+    #quadradoBebidas {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        height: 25%;
+    }
+
+    #imagemBebidas {
+        display: flex;
+        width: 25%;
+        height: 100%;
+    }
+
+    #imagemBebidas img {
+        width: 5rem;
+        height: 5rem;
+        margin: auto;
+    }
+
+    #textoBebidas {
+        width: 60%;
+        height: 100%;
+        text-align: center;
+    }
+    
+    #textoBebidas h1 {
+        font-family: var(--fonte-principal);
+        font-size: 12pt;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    #textoBebidas p {
+        font-family: var(--fonte-principal);
+        font-size: 10pt;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    /* FIM BEBIDAS */
+
+    /* AÇAI SORVETE */
+    #outros {
+        display: none;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 55vh;
+        background: #00000040;
+        box-shadow: 0 8px 32px 0 #1f26875e;
+        backdrop-filter: blur( 2px );
+        -webkit-backdrop-filter: blur( 2px );
+        border-radius: 10px;
+        margin-top: 1rem;
+    }
+
+    #quadradoOutros {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        height: 25%;
+    }
+
+    #imagemOutros {
+        display: flex;
+        width: 25%;
+        height: 100%;
+    }
+
+    #imagemOutros img {
+        width: 5rem;
+        height: 5rem;
+        margin: auto;
+    }
+
+    #textoOutros {
+        width: 60%;
+        height: 100%;
+        text-align: center;
+    }
+    
+    #textoOutros h1 {
+        font-family: var(--fonte-principal);
+        font-size: 12pt;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    #textoOutros p {
+        font-family: var(--fonte-principal);
+        font-size: 10pt;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+}
+
+@media screen and (min-width: 2048px) {
     body {
         background: #b71c1c;
         background: -webkit-linear-gradient(45deg, #b71c1c 0%, #c63535 50%, #ff0000 100%);
