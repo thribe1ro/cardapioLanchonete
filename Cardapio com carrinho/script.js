@@ -151,7 +151,7 @@ enviarPedido.forEach(botao => {
         let quantidadeID = document.querySelector("#quantidade");
         let quantidadeCLASS = document.querySelector(".quantidade");
         // Monta a lista de itens a partir do array Sacola
-        const pedido = Sacola.map(item => `${item.quantity}x ${item.name} - `).join("\n");
+        const pedido = Sacola.map(item => `${item.quantity}x ${item.name} `).join("\n");
 
         // Calcula o total da sacola
         const totalSacola = Sacola.reduce((acc, item) => acc + (item.price * item.quantity), 0);
