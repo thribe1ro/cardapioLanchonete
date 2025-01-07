@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cardápio</title>
+    <title>Adega Central</title>
     <link rel="stylesheet" href="style.css">
         <!--META TAG OG "OPEN GRAPHICS"-->
         <meta property="og:type" content="website">
@@ -16,141 +16,524 @@
     <header>
         <section id="quadradoHeader">
             <div id="quadradoImagem">
-                <img src="/Cardapio com carrinho/imagens/TeJota.png" id="logo" alt="logo">
+                <img src="/Cardapio com carrinho/imagens/logoAdegaCentral.jpg" id="logo" alt="logo">
             </div>
             <div id="quadradoTexto">
-                <h1>TEJOTA AÇAITERIA</h1>
+                <h1>ADEGA CENTRAL</h1>
             </div>
             <div class="quadradoSacola">
-                <img src="imagens/sacola.svg" id="sacola" alt="Sacola">
+                <img src="imagens/sacolaBlack.svg" id="sacola" alt="Sacola">
                 <span id="quantidade">0</span>
             </div>
         </section>
     </header>
     <main>
         <section id="quadradoSelecao">
-            <div id="acai">
-                <p>Açai</p>
+            <div id="latas">
+                <p>Latas</p>
             </div>
-            <div id="adicionais">
-                <p>Adicionais</p>
+            <div id="garrafas">
+                <p>Garrafas</p>
+            </div>
+            <div id="GIN">
+                <p>GIN</p>
+            </div>
+            <div id="whisky">
+                <p>whisky</p>
+            </div>
+            <div id="vodka">
+                <p>vodka</p>
             </div>
         </section>
-        <section id="quadradoItensAcai">
-            <!-- 300 ml -->
+        <section id="quadradoItenslatas">
+            <!-- Skol 350 ml -->
             <div id="itens">
                 <div id="itensImagem">
-                    <img src="/Cardapio com carrinho/imagens/acai300ml.png" alt="Açai 300ml">
+                    <img src="/Cardapio com carrinho/imagens/latas/230337-300-auto.webp" alt="Skol 350ml">
                 </div>
                 <div id="itensTexto">
-                    <h1>Açai puro</h1>
-                    <p>500ml</p>
-                    <h1>R$ 15,90</h1>
-                    <button class="botaoAdicionar" data-name="AÇAI PURO 300ml" data-price="9.90">
+                    <h1>Skol</h1>
+                    <p>350ml</p>
+                    <h1>R$ 5,90</h1>
+                    <button class="botaoAdicionar" data-name="Skol 350ml" data-price="5.90">
                         <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
                     </button>
                 </div>
             </div>
-            <!-- 500 ml -->
+            <!-- Brahma 269 ml -->
             <div id="itens">
                 <div id="itensImagem">
-                    <img src="/Cardapio com carrinho/imagens/acai500ml.png" alt="Açai 500ml">
+                    <img src="/Cardapio com carrinho/imagens/latas/254666-300-auto.webp" alt="Brahma 269ml">
                 </div>
                 <div id="itensTexto">
-                    <h1>Açai puro</h1>
-                    <p>500ml</p>
-                    <h1>R$ 15,90</h1>
-                    <button class="botaoAdicionar" data-name="AÇAI PURO 500ml" data-price="12.90">
+                    <h1>Brahma</h1>
+                    <p> 269ml</p>
+                    <h1>R$ 3,90</h1>
+                    <button class="botaoAdicionar" data-name="Brahma 269ml" data-price="3.90">
                         <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
                     </button>
                 </div>
             </div>
-                        <!-- 700 ml -->
-                        <div id="itens">
-                            <div id="itensImagem">
-                                <img src="/Cardapio com carrinho/imagens/acai700ml.png" alt="Açai 700ml">
-                            </div>
-                            <div id="itensTexto">
-                                <h1>Açai puro</h1>
-                                <p>500ml</p>
-                                <h1>R$ 15,90</h1>
-                                <button class="botaoAdicionar" data-name="AÇAI PURO 700ml" data-price="15.90">
-                                    <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
-                                </button>
-                            </div>
-                        </div>
-
+            <!-- Budweiser 350ml -->
+            <div id="itens">
+                <div id="itensImagem">
+                    <img src="/Cardapio com carrinho/imagens/latas/258795-300-auto.webp" alt="Budweiser 350ml">
+                </div>
+                <div id="itensTexto">
+                    <h1>Budweiser</h1>
+                    <p>350ml</p>
+                    <h1>R$ 5,90</h1>
+                    <button class="botaoAdicionar" data-name="Budweiser 350ml" data-price="5.90">
+                        <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
+                    </button>
+                </div>
+            </div>
+            <!-- Spaten 269ml -->
+            <div id="itens">
+                <div id="itensImagem">
+                    <img src="/Cardapio com carrinho/imagens/latas/261372-300-auto.webp" alt="Spaten 269ml">
+                </div>
+                <div id="itensTexto">
+                    <h1>Spaten</h1>
+                    <p>269ml</p>
+                    <h1>R$ 5,90</h1>
+                    <button class="botaoAdicionar" data-name="Spaten 269ml" data-price="5.90">
+                        <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
+                    </button>
+                </div>
+            </div>
+            <!-- Hineken Zero 350ml -->
+            <div id="itens">
+                <div id="itensImagem">
+                    <img src="/Cardapio com carrinho/imagens/latas/263872-300-auto.webp" alt="Hineken Zero 350ml">
+                </div>
+                <div id="itensTexto">
+                    <h1>Hineken</h1>
+                    <p>350ml</p>
+                    <h1>R$ 5,90</h1>
+                    <button class="botaoAdicionar" data-name="Hineken Zero 350ml" data-price="5.90">
+                        <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
+                    </button>
+                </div>
+            </div>
+            <!-- Hineken 350ml -->
+            <div id="itens">
+                <div id="itensImagem">
+                    <img src="/Cardapio com carrinho/imagens/latas/263896-300-auto.webp" alt="Hineken 350ml">
+                </div>
+                <div id="itensTexto">
+                    <h1>Hineken</h1>
+                    <p>350ml</p>
+                    <h1>R$ 5,90</h1>
+                    <button class="botaoAdicionar" data-name="Hineken 350ml" data-price="5.90">
+                        <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
+                    </button>
+                </div>
+            </div>
+            <!-- Amstel 350ml -->
+            <div id="itens">
+                <div id="itensImagem">
+                    <img src="/Cardapio com carrinho/imagens/latas/300607-300-auto.webp" alt="Amstel 350ml">
+                </div>
+                <div id="itensTexto">
+                    <h1>Amstel</h1>
+                    <p>350ml</p>
+                    <h1>R$ 5,90</h1>
+                    <button class="botaoAdicionar" data-name="Amstel 350ml" data-price="5.90">
+                        <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
+                    </button>
+                </div>
+            </div>
+            <!-- Itaipava 350ml -->
+            <div id="itens">
+                <div id="itensImagem">
+                    <img src="/Cardapio com carrinho/imagens/latas/321166-300-auto.webp" alt="Itaipava 350ml">
+                </div>
+                <div id="itensTexto">
+                    <h1>Itaipava</h1>
+                    <p>350ml</p>
+                    <h1>R$ 5,90</h1>
+                    <button class="botaoAdicionar" data-name="Itaipava 350ml" data-price="5.90">
+                        <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
+                    </button>
+                </div>
+            </div>
         </section>
 
-        <section id="quadradoItensAdicionais">
-            <!-- Banana -->
+        <section id="quadradoItensgarrafas">
+            <!-- Long Neck Heineken 330ml -->
             <div id="itens">
                 <div id="itensImagem">
-                    <img src="/Cardapio com carrinho/imagens/banana.png" alt="Banana">
+                    <img src="/Cardapio com carrinho/imagens/garrafas/239783-300-auto.webp" alt="Long Neck Heineken">
                 </div>
                 <div id="itensTexto">
-                    <h1>BANANA</h1>
-                    <h1>R$ 2,00</h1>
-                    <button class="botaoAdicionar" data-name="BANANA" data-price="2.00">
+                    <h1>Heineken</h1>
+                    <p>330ml</p>
+                    <h1>R$ 6,00</h1>
+                    <button class="botaoAdicionar" data-name="Heineken" data-price="6.00">
                         <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
                     </button>
                 </div>
             </div>
-             <!-- Paçoca -->
+             <!-- Long Neck Heineken 0% 330ml -->
             <div id="itens">
                     <div id="itensImagem">
-                    <img src="/Cardapio com carrinho/imagens/pacoca.png" alt="Paçoca">
+                    <img src="/Cardapio com carrinho/imagens/garrafas/248165-300-auto.webp" alt="Long Neck Heineken 0% 330ml">
                 </div>
                  <div id="itensTexto">
-                    <h1>PAÇOCA</h1>
-                    <h1>R$ 2,00</h1>
-                    <button class="botaoAdicionar" data-name="PAÇOCA" data-price="2.00">
+                    <h1>Heineken</h1>
+                    <p>330ml</p>
+                    <h1>R$ 6,00</h1>
+                    <button class="botaoAdicionar" data-name="Heineken 0%" data-price="6.00">
                         <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
                     </button>
                 </div>
             </div>
-            <!-- Leite condensado -->
+            <!-- Long Neck Stella 330ml-->
             <div id="itens">
                 <div id="itensImagem">
-                    <img src="/Cardapio com carrinho/imagens/leiteCondensado.webp" alt="Leite condensado">
+                    <img src="/Cardapio com carrinho/imagens/garrafas/248732-300-auto.webp" alt="Long Neck Stella 330ml">
                 </div>
                 <div id="itensTexto">
-                    <h1>LEITE CONDENSADO</h1>
-                    <h1>R$ 2,00</h1>
-                    <button class="botaoAdicionar" data-name="LEITE CONDENSADO" data-price="2.00">
+                    <h1>Stella</h1>
+                    <p>330ml</p>
+                    <h1>R$ 6,00</h1>
+                    <button class="botaoAdicionar" data-name="Stella 330ml" data-price="6.00">
                         <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
                     </button>
                 </div>
             </div>
-            <!-- Leite ninho -->
+            <!-- Long Neck Stella 0% 330ml -->
             <div id="itens">
                 <div id="itensImagem">
-                    <img src="/Cardapio com carrinho/imagens/ninho.webp" alt="Leite ninho">
+                    <img src="/Cardapio com carrinho/imagens/garrafas/311747-300-auto.webp" alt="Long Neck Stella 0% 330ml">
                 </div>
                 <div id="itensTexto">
-                    <h1>LEITE NINHO</h1>
-                    <h1>R$ 2,00</h1>
-                    <button class="botaoAdicionar" data-name="LEITE NINHO" data-price="2.00">
+                    <h1>Stella</h1>
+                    <p>330ml</p>
+                    <h1>R$ 6,00</h1>
+                    <button class="botaoAdicionar" data-name="Stella 0%" data-price="6.00">
                         <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
                     </button>
                 </div>
             </div>
-            <!-- Morango -->
+            <!-- Long Neck Sol 330ml -->
             <div id="itens">
                 <div id="itensImagem">
-                    <img src="/Cardapio com carrinho/imagens/morango.png" alt="MORANGO">
+                    <img src="/Cardapio com carrinho/imagens/garrafas/312657-300-auto.webp" alt="Long Neck Sol 330ml">
                 </div>
                 <div id="itensTexto">
-                    <h1>MORANGO</h1>
-                    <h1>R$ 2,00</h1>
-                    <button class="botaoAdicionar" data-name="MORANGO" data-price="2.00">
+                    <h1>Sol</h1>
+                    <p>330ml</p>
+                    <h1>R$ 6,00</h1>
+                    <button class="botaoAdicionar" data-name="Sol 330ml" data-price="6.00">
+                        <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
+                    </button>
+                </div>
+            </div>
+            <!-- Long Neck Budweiser 330ml -->
+            <div id="itens">
+                <div id="itensImagem">
+                    <img src="/Cardapio com carrinho/imagens/garrafas/317663-300-auto.webp" alt="Long Neck Budweiser 330ml">
+                 </div>
+                <div id="itensTexto">
+                    <h1>Budweiser</h1>
+                    <p>330ml</p>
+                    <h1>R$ 6,00</h1>
+                    <button class="botaoAdicionar" data-name="Budweiser" data-price="6.00">
+                        <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
+                    </button>
+                </div>
+            </div>
+            <!-- Long Neck Corona -->
+            <div id="itens">
+                <div id="itensImagem">
+                    <img src="/Cardapio com carrinho/imagens/garrafas/314423-300-auto.webp" alt="Long Neck Corona">
+                </div>
+                <div id="itensTexto">
+                    <h1>Corona</h1>
+                    <p>330ml</p>
+                    <h1>R$ 6,00</h1>
+                    <button class="botaoAdicionar" data-name="Corona" data-price="6.00">
+                        <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
+                    </button>
+                </div>
+            </div>
+            <!-- Long Neck Corona 0% -->
+            <div id="itens">
+                <div id="itensImagem">
+                    <img src="/Cardapio com carrinho/imagens/garrafas/322923-300-auto.webp" alt="Long Neck Corona 0%">
+                </div>
+                <div id="itensTexto">
+                    <h1>Corona</h1>
+                    <p>330ml</p>
+                    <h1>R$ 6,00</h1>
+                    <button class="botaoAdicionar" data-name="Corona 0%" data-price="6.00">
+                        <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
+                    </button>
+                </div>
+            </div>
+            <!-- Long Neck Itaipava -->
+            <div id="itens">
+                <div id="itensImagem">
+                    <img src="/Cardapio com carrinho/imagens/garrafas/321201-300-auto.webp" alt="Long Neck Itaipava">
+                </div>
+                <div id="itensTexto">
+                    <h1>Itaipava</h1>
+                    <p>330ml</p>
+                    <h1>R$ 6,00</h1>
+                    <button class="botaoAdicionar" data-name="Itaipava" data-price="6.00">
+                        <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
+                    </button>
+                </div>
+            </div>
+            
+
+        </section>
+        <section id="quadradoItensgin">
+            <!-- GIN SAPPHIRE -->
+            <div id="itens">
+                <div id="itensImagem">
+                    <img src="/Cardapio com carrinho/imagens/gin/266629-300-auto.webp" alt="GIN SAPPHIRE">
+                </div>
+                <div id="itensTexto">
+                    <h1>SAPPHIRE</h1>
+                    <p>750ML</p>
+                    <h1>R$ 115,00</h1>
+                    <button class="botaoAdicionar" data-name="SAPPHIRE" data-price="115.00">
+                        <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
+                    </button>
+                </div>
+            </div>
+             <!-- GIN INTERNCION -->
+            <div id="itens">
+                    <div id="itensImagem">
+                    <img src="/Cardapio com carrinho/imagens/gin/282548-300-auto.webp" alt="GIN INTERNCION">
+                </div>
+                 <div id="itensTexto">
+                    <h1>INTERNCION</h1>
+                    <p>900ML</p>
+                    <h1>R$ 18,00</h1>
+                    <button class="botaoAdicionar" data-name="INTERNCION" data-price="18.00">
+                        <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
+                    </button>
+                </div>
+            </div>
+            <!-- GIN INTERNCION MELANCIA -->
+            <div id="itens">
+                <div id="itensImagem">
+                    <img src="/Cardapio com carrinho/imagens/gin/282718-300-auto.webp" alt="GIN INTERNCION MELANCIA">
+                </div>
+                <div id="itensTexto">
+                    <h1>MELANCIA</h1>
+                    <p>900ml</p>
+                    <h1>R$ 18,00</h1>
+                    <button class="botaoAdicionar" data-name="INTERNCION MELANCIA" data-price="18.00">
+                        <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
+                    </button>
+                </div>
+            </div>
+            <!-- GIN INTERNCION STRAWBERRY -->
+            <div id="itens">
+                <div id="itensImagem">
+                    <img src="/Cardapio com carrinho/imagens/gin/283095-300-auto.webp" alt="GIN INTERNCION STRAWBERRY">
+                </div>
+                <div id="itensTexto">
+                    <h1>STRAWBERRY</h1>
+                    <p>330ml</p>
+                    <h1>R$ 18,00</h1>
+                    <button class="botaoAdicionar" data-name="INTERNCION STRAWBERRY" data-price="18.00">
+                        <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
+                    </button>
+                </div>
+            </div>
+            <!-- GIN ROCK's STRAWBERRY -->
+            <div id="itens">
+                <div id="itensImagem">
+                    <img src="/Cardapio com carrinho/imagens/gin/283843-300-auto.webp" alt="GIN ROCK's STRAWBERRY">
+                </div>
+                <div id="itensTexto">
+                    <h1>ROCK's STRAWBERRY</h1>
+                    <p>1L</p>
+                    <h1>R$ 33,00</h1>
+                    <button class="botaoAdicionar" data-name="ROCK's STRAWBERRY" data-price="33.00">
                         <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
                     </button>
                 </div>
             </div>
         </section>
-
-
+        <section id="quadradoItenswhisky">
+            <!-- PASSPORT -->
+            <div id="itens">
+                <div id="itensImagem">
+                    <img src="/Cardapio com carrinho/imagens/whisky/282309-300-auto.webp" alt=" PASSPORT ">
+                </div>
+                <div id="itensTexto">
+                    <h1>PASSPORT</h1>
+                    <p>1L</p>
+                    <h1>R$ 44,00</h1>
+                    <button class="botaoAdicionar" data-name="PASSPORT" data-price="44.00">
+                        <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
+                    </button>
+                </div>
+            </div>
+             <!-- WHITEHORSE  -->
+            <div id="itens">
+                    <div id="itensImagem">
+                    <img src="/Cardapio com carrinho/imagens/whisky/282815-300-auto.webp" alt="WHITEHORSE">
+                </div>
+                 <div id="itensTexto">
+                    <h1>WHITEHORSE</h1>
+                    <p>500ml</p>
+                    <h1>R$ 40,00</h1>
+                    <button class="botaoAdicionar" data-name="WHITEHORSE" data-price="40.00">
+                        <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
+                    </button>
+                </div>
+            </div>
+            <!--  REDLABEL 1L -->
+            <div id="itens">
+                <div id="itensImagem">
+                    <img src="/Cardapio com carrinho/imagens/whisky/302833-300-auto.webp" alt="REDLABEL">
+                </div>
+                <div id="itensTexto">
+                    <h1>REDLABEL</h1>
+                    <p>1L</p>
+                    <h1>R$ 98,00</h1>
+                    <button class="botaoAdicionar" data-name="REDLABEL" data-price="98.00">
+                        <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
+                    </button>
+                </div>
+            </div>
+            <!--  REDLABEL 750ml -->
+            <div id="itens">
+                <div id="itensImagem">
+                    <img src="/Cardapio com carrinho/imagens/whisky/307766-300-auto.webp" alt="REDLABEL 750ml">
+                </div>
+                <div id="itensTexto">
+                    <h1>REDLABEL</h1>
+                    <p>750ml</p>
+                    <h1>R$ 73,00</h1>
+                    <button class="botaoAdicionar" data-name="REDLABEL 750ml" data-price="73.00">
+                        <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
+                    </button>
+                </div>
+            </div>
+            <!--  BLACKLABEL -->
+            <div id="itens">
+                <div id="itensImagem">
+                    <img src="/Cardapio com carrinho/imagens/whisky/318009-300-auto.webp" alt="BLACKLABEL">
+                </div>
+                <div id="itensTexto">
+                    <h1>BLACKLABEL</h1>
+                    <p>750ml</p>
+                    <h1>R$ 135,00</h1>
+                    <button class="botaoAdicionar" data-name="BLACKLABEL" data-price="135.00">
+                        <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
+                    </button>
+                </div>
+            </div>
+            <!--  BALLANTINE's -->
+            <div id="itens">
+                <div id="itensImagem">
+                    <img src="/Cardapio com carrinho/imagens/whisky/317995-300-auto.webp" alt="BALLANTINE's">
+                </div>
+                <div id="itensTexto">
+                    <h1>BALLANTINE's</h1>
+                    <p>1L</p>
+                    <h1>R$ 80,00</h1>
+                    <button class="botaoAdicionar" data-name="BALLANTINE's" data-price="80.00">
+                        <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section id="quadradoItensvodka">
+            <!-- CIROC -->
+            <div id="itens">
+                <div id="itensImagem">
+                    <img src="/Cardapio com carrinho/imagens/whisky/282309-300-auto.webp" alt="CIROC">
+                </div>
+                <div id="itensTexto">
+                    <h1>CIROC</h1>
+                    <p>750ml</p>
+                    <h1>R$ 190,00</h1>
+                    <button class="botaoAdicionar" data-name="CIROC" data-price="190.00">
+                        <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
+                    </button>
+                </div>
+            </div>
+             <!-- SMIRNOFF -->
+            <div id="itens">
+                    <div id="itensImagem">
+                    <img src="/Cardapio com carrinho/imagens/whisky/282815-300-auto.webp" alt="SMIRNOFF">
+                </div>
+                 <div id="itensTexto">
+                    <h1>SMIRNOFF</h1>
+                    <p>998ml</p>
+                    <h1>R$ 38,00</h1>
+                    <button class="botaoAdicionar" data-name="SMIRNOFF" data-price="38.00">
+                        <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
+                    </button>
+                </div>
+            </div>
+            <!-- BALALAIKA -->
+            <div id="itens">
+                <div id="itensImagem">
+                    <img src="/Cardapio com carrinho/imagens/whisky/302833-300-auto.webp" alt="BALALAIKA">
+                </div>
+                <div id="itensTexto">
+                    <h1>BALALAIKA</h1>
+                    <p>1L</p>
+                    <h1>R$ 11,00</h1>
+                    <button class="botaoAdicionar" data-name="BALALAIKA" data-price="11.00">
+                        <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
+                    </button>
+                </div>
+            </div>
+            <!-- ABSOLUT -->
+            <div id="itens">
+                <div id="itensImagem">
+                    <img src="/Cardapio com carrinho/imagens/whisky/307766-300-auto.webp" alt="ABSOLUT">
+                </div>
+                <div id="itensTexto">
+                    <h1>ABSOLUT</h1>
+                    <p>1L</p>
+                    <h1>R$ 103,00</h1>
+                    <button class="botaoAdicionar" data-name="ABSOLUT 1L" data-price="103.00">
+                        <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
+                    </button>
+                </div>
+            </div>
+            <!-- ABSOLUT VANILLA  -->
+            <div id="itens">
+                <div id="itensImagem">
+                    <img src="/Cardapio com carrinho/imagens/whisky/318009-300-auto.webp" alt="ABSOLUT VANILLA">
+                </div>
+                <div id="itensTexto">
+                    <h1>VANILLA</h1>
+                    <p>750ml</p>
+                    <h1>R$ 86,00</h1>
+                    <button class="botaoAdicionar" data-name="ABSOLUT VANILLA" data-price="86.00">
+                        <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
+                    </button>
+                </div>
+            </div>
+            <!-- INTENCION -->
+            <div id="itens">
+                <div id="itensImagem">
+                    <img src="/Cardapio com carrinho/imagens/whisky/317995-300-auto.webp" alt="INTENCION">
+                </div>
+                <div id="itensTexto">
+                    <h1>INTENCION</h1>
+                    <p>900ml</p>
+                    <h1>R$ 15,00</h1>
+                    <button class="botaoAdicionar" data-name="INTENCION" data-price="15.00">
+                        <img src="/Cardapio com carrinho/imagens/sacola.svg" alt="Sacola">
+                    </button>
+                </div>
+            </div>
+        </section>
     </main>
 
     <section id="abrirSacola">

@@ -8,10 +8,9 @@
     body {
         width: auto;
         height: 100vh;
-        background: #6734cb;
-        background: -webkit-linear-gradient(292deg, #2f0349 0%, #ff3636 100%);
-        background: linear-gradient(292deg, #6734cb 0%, #ff3636 100%);
-        background-repeat: no-repeat;
+        background: #000000;
+        background: -webkit-linear-gradient(307deg, #000000 0%, #2f2f2f 50%, #000000 100%);
+        background: linear-gradient(307deg, #000000 0%, #2f2f2f 50%, #000000 100%);
     }
 
     #quadradoHeader {
@@ -48,9 +47,6 @@
     }
 
     #quadradoTexto h1 {
-        background: -webkit-linear-gradient(-67deg, #ff0000 50%, #6734cb 50%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
         font-family: var(--fonte-principal);   
         font-size: 20pt;
         font-weight: 600;
@@ -90,6 +86,8 @@
     #quadradoSelecao {
         display: flex;
         flex-direction: row;
+        flex-wrap: nowrap;
+        overflow: auto;
         width: 100%;
         height: 3rem;
         margin-top: 10px;
@@ -97,49 +95,52 @@
         border-radius: 10px;
         border: 1px solid #ffffff2e;
     }
-    /* Açai ativo */
+    /* Latas ativo */
 
-    #quadradoItensAcai {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+    #quadradoItenslatas {
+        display: grid;
+        column-gap: 0px;
+        grid-template-columns: 150px 150px;
+        overflow: auto;
         width: 100%;
         height: 50vh;
         margin-top: 10px;
-        background: #ffffff8d;
+        background: #fff;
         border-radius: 10px;
         border: 1px solid #ffffff2e;
     }
 
-    #acai {
-        background: #ff1f1fb4;
+    #latas {
+        background: #FEE502;
         border-radius: 10px 0 0 10px;
         transition: all 0.5s ease;
     }
 
-    #adicionais {
+    #vodka {
         border-radius: 0px 10px 10px 0px;
     }
 
-    #acai, #adicionais {
+    #latas, #garrafas, #GIN, #whisky, #vodka {
         display: flex;
         flex-direction: column;
         width: 50%;
         height: 100%;
+        cursor: pointer;
     }
 
-    #acai p, #adicionais p {
+    #latas p, #garrafas p, #GIN p, #whisky p, #vodka p {
         text-transform: uppercase;
         color: #000;
         font-family: var(--fonte-principal);   
         font-weight: 700;
         text-align: center;
+        margin: auto 10px;
     }
 
     #itens {
         display: flex;
         flex-direction: row;
-        width: 50%;
+        width: 100%;
         height: 7rem;
     }
 
@@ -181,23 +182,71 @@
         width: 3rem;
         border: none;
         border-radius: 10px;
+        background: #121212;
     }
 
     .botaoAdicionar img{
         width: 1.5rem;
     }
 
-    /* Fim Açai ativo */
-    /* Adicionais ativo */
+    /* FIM LATAS ATIVO */
 
-    #quadradoItensAdicionais {
+    /* GARRAFA ATIVO*/
+
+    #quadradoItensgarrafas {
         display: none;
-        flex-direction: column;
-        flex-wrap: wrap;
+        column-gap: 0px;
+        grid-template-columns: 150px 150px;
+        overflow: auto;
         width: 100%;
         height: 50vh;
         margin-top: 10px;
-        background: #ffffff8d;
+        background: #fff;
+        border-radius: 10px;
+        border: 1px solid #ffffff2e;
+    }
+
+    /* GIN ATIVO */
+
+    #quadradoItensgin {
+        display: none;
+        column-gap: 0px;
+        grid-template-columns: 150px 150px;
+        overflow: auto;
+        width: 100%;
+        height: 50vh;
+        margin-top: 10px;
+        background: #fff;
+        border-radius: 10px;
+        border: 1px solid #ffffff2e;
+    }
+
+    /* WHISKY ATIVO */
+
+    #quadradoItenswhisky {
+        display: none;
+        column-gap: 0px;
+        grid-template-columns: 150px 150px;
+        overflow: auto;
+        width: 100%;
+        height: 50vh;
+        margin-top: 10px;
+        background: #fff;
+        border-radius: 10px;
+        border: 1px solid #ffffff2e;
+    }
+
+    /* VODKA ATIVO */
+
+    #quadradoItensvodka {
+        display: none;
+        column-gap: 0px;
+        grid-template-columns: 150px 150px;
+        overflow: auto;
+        width: 100%;
+        height: 50vh;
+        margin-top: 10px;
+        background: #fff;
         border-radius: 10px;
         border: 1px solid #ffffff2e;
     }
@@ -355,13 +404,286 @@
 
     }
 
+    @media (width: 320px) and (max-height: 740px) {
+        #enderecoLabel {
+            font-family: var(--fonte-principal);   
+            font-weight: 500;
+            font-size: 12pt;
+            position: absolute;
+            top: 50%;
+            left: 20px !important;
+            color: #000;
+            pointer-events: none;
+            transform: translateY(1rem);
+            transition: 150ms cubic-bezier(0.4,0,0.2,1);
+        }
+    
+        #endereco:focus, #endereco:valid {
+            outline: none;
+            border: 1.5px solid #000000;
+        }
+
+        #endereco:focus ~ #enderecoLabel, #endereco:valid ~ #enderecoLabel {
+            transform: translateY(-140%) scale(0.8) !important;
+            background-color: #fff;
+            padding: 0 .2em;
+            color: #000000;
+        }
+
+        #endereco:not(:focus):placeholder-shown ~ #enderecoLabel {
+            transform: translateY(-50%) !important; 
+            background-color: transparent; 
+            color: #000000; 
+        }
+    
+    }
+
+    @media (width: 360px) and (height: 740px) {
+        #enderecoLabel {
+            font-family: var(--fonte-principal);   
+            font-weight: 500;
+            font-size: 12pt;
+            position: absolute;
+            top: 50%;
+            left: 30px !important;
+            color: #000;
+            pointer-events: none;
+            transform: translateY(1rem);
+            transition: 150ms cubic-bezier(0.4,0,0.2,1);
+        }
+    
+        #endereco:focus, #endereco:valid {
+            outline: none;
+            border: 1.5px solid #000000;
+        }
+
+        #endereco:focus ~ #enderecoLabel, #endereco:valid ~ #enderecoLabel {
+            transform: translateY(-140%) scale(0.8) !important;
+            background-color: #fff;
+            padding: 0 .2em;
+            color: #000000;
+        }
+
+        #endereco:not(:focus):placeholder-shown ~ #enderecoLabel {
+            transform: translateY(-50%) !important; 
+            background-color: transparent; 
+            color: #000000; 
+        }
+    
+    }
+
+    @media (width: 360px) and (height: 800px) {
+        #enderecoLabel {
+            font-family: var(--fonte-principal);   
+            font-weight: 500;
+            font-size: 12pt;
+            position: absolute;
+            top: 50%;
+            left: 30px !important;
+            color: #000;
+            pointer-events: none;
+            transform: translateY(1rem);
+            transition: 150ms cubic-bezier(0.4,0,0.2,1);
+        }
+    
+        #endereco:focus, #endereco:valid {
+            outline: none;
+            border: 1.5px solid #000000;
+        }
+
+        #endereco:focus ~ #enderecoLabel, #endereco:valid ~ #enderecoLabel {
+            transform: translateY(-140%) scale(0.8) !important;
+            background-color: #fff;
+            padding: 0 .2em;
+            color: #000000;
+        }
+
+        #endereco:not(:focus):placeholder-shown ~ #enderecoLabel {
+            transform: translateY(-50%) !important; 
+            background-color: transparent; 
+            color: #000000; 
+        }
+    
+    }
+    
+    @media (width: 375px) and (height: 667px) {
+        #enderecoLabel {
+            font-family: var(--fonte-principal);   
+            font-weight: 500;
+            font-size: 12pt;
+            position: absolute;
+            top: 50%;
+            left: 40px !important;
+            color: #000;
+            pointer-events: none;
+            transform: translateY(1rem);
+            transition: 150ms cubic-bezier(0.4,0,0.2,1);
+        }
+    
+        #endereco:focus, #endereco:valid {
+            outline: none;
+            border: 1.5px solid #000000;
+        }
+
+        #endereco:focus ~ #enderecoLabel, #endereco:valid ~ #enderecoLabel {
+            transform: translateY(-140%) scale(0.8) !important;
+            background-color: #fff;
+            padding: 0 .2em;
+            color: #000000;
+        }
+
+        #endereco:not(:focus):placeholder-shown ~ #enderecoLabel {
+            transform: translateY(-50%) !important; 
+            background-color: transparent; 
+            color: #000000; 
+        }
+    
+    }
+
+    @media (width: 375px) and (height: 812px) {
+        #enderecoLabel {
+            font-family: var(--fonte-principal);   
+            font-weight: 500;
+            font-size: 12pt;
+            position: absolute;
+            top: 50%;
+            left: 35px !important;
+            color: #000;
+            pointer-events: none;
+            transform: translateY(1rem);
+            transition: 150ms cubic-bezier(0.4,0,0.2,1);
+        }
+    
+        #endereco:focus, #endereco:valid {
+            outline: none;
+            border: 1.5px solid #000000;
+        }
+
+        #endereco:focus ~ #enderecoLabel, #endereco:valid ~ #enderecoLabel {
+            transform: translateY(-140%) scale(0.8) !important;
+            background-color: #fff;
+            padding: 0 .2em;
+            color: #000000;
+        }
+
+        #endereco:not(:focus):placeholder-shown ~ #enderecoLabel {
+            transform: translateY(-50%) !important; 
+            background-color: transparent; 
+            color: #000000; 
+        }
+    
+    }
+
+    @media (width: 384px) and (height: 854px) {
+        #enderecoLabel {
+            font-family: var(--fonte-principal);   
+            font-weight: 500;
+            font-size: 12pt;
+            position: absolute;
+            top: 50%;
+            left: 40px !important;
+            color: #000;
+            pointer-events: none;
+            transform: translateY(1rem);
+            transition: 150ms cubic-bezier(0.4,0,0.2,1);
+        }
+    
+        #endereco:focus, #endereco:valid {
+            outline: none;
+            border: 1.5px solid #000000;
+        }
+
+        #endereco:focus ~ #enderecoLabel, #endereco:valid ~ #enderecoLabel {
+            transform: translateY(-140%) scale(0.8) !important;
+            background-color: #fff;
+            padding: 0 .2em;
+            color: #000000;
+        }
+
+        #endereco:not(:focus):placeholder-shown ~ #enderecoLabel {
+            transform: translateY(-50%) !important; 
+            background-color: transparent; 
+            color: #000000; 
+        }
+    
+    }
+
+    @media (width: 390px) and (height: 844px) {
+        #enderecoLabel {
+            font-family: var(--fonte-principal);   
+            font-weight: 500;
+            font-size: 12pt;
+            position: absolute;
+            top: 50%;
+            left: 40px !important;
+            color: #000;
+            pointer-events: none;
+            transform: translateY(1rem);
+            transition: 150ms cubic-bezier(0.4,0,0.2,1);
+        }
+    
+        #endereco:focus, #endereco:valid {
+            outline: none;
+            border: 1.5px solid #000000;
+        }
+
+        #endereco:focus ~ #enderecoLabel, #endereco:valid ~ #enderecoLabel {
+            transform: translateY(-140%) scale(0.8) !important;
+            background-color: #fff;
+            padding: 0 .2em;
+            color: #000000;
+        }
+
+        #endereco:not(:focus):placeholder-shown ~ #enderecoLabel {
+            transform: translateY(-50%) !important; 
+            background-color: transparent; 
+            color: #000000; 
+        }
+    
+    }
+
+    @media (width: 414px) and (height: 896px) {
+        #enderecoLabel {
+            font-family: var(--fonte-principal);   
+            font-weight: 500;
+            font-size: 12pt;
+            position: absolute;
+            top: 50%;
+            left: 50px !important;
+            color: #000;
+            pointer-events: none;
+            transform: translateY(1rem);
+            transition: 150ms cubic-bezier(0.4,0,0.2,1);
+        }
+    
+        #endereco:focus, #endereco:valid {
+            outline: none;
+            border: 1.5px solid #000000;
+        }
+
+        #endereco:focus ~ #enderecoLabel, #endereco:valid ~ #enderecoLabel {
+            transform: translateY(-140%) scale(0.8) !important;
+            background-color: #fff;
+            padding: 0 .2em;
+            color: #000000;
+        }
+
+        #endereco:not(:focus):placeholder-shown ~ #enderecoLabel {
+            transform: translateY(-50%) !important; 
+            background-color: transparent; 
+            color: #000000; 
+        }
+        
+    }
+
+
     #enderecoLabel {
         font-family: var(--fonte-principal);   
         font-weight: 500;
         font-size: 12pt;
         position: absolute;
         top: 50%;
-        left: 15px;
+        left: 50px;
         color: #000;
         pointer-events: none;
         transform: translateY(1rem);
@@ -374,7 +696,7 @@
     }
 
     #endereco:focus ~ #enderecoLabel, #endereco:valid ~ #enderecoLabel {
-        transform: translateY(-130%) scale(0.8);
+        transform: translateY(-150%) scale(0.8);
         background-color: #ffffff;
         padding: 0 .2em;
         color: #000000;
@@ -410,8 +732,10 @@
         position: absolute;
         top: 1rem;
         display: none;
-        width: 90%;
+        flex-direction: column;
+        width: 95%;
         text-align: center;
+        align-items: center;
         transition: all linear;
         z-index: 95;
     }
@@ -454,8 +778,10 @@
         position: absolute;
         top: 1rem;
         display: none;
-        width: 90%;
+        flex-direction: column;
+        width: 95%;
         text-align: center;
+        align-items: center;
         transition: all linear;
         z-index: 100;
     }
@@ -497,13 +823,14 @@
 
       #notificacaoEndereco {
         position: absolute;
-        top: 25rem;
-        left: 20%;
+        top: 1rem;
         display: none;
+        flex-direction: column;
+        width: 95%;
         text-align: center;
+        align-items: center;
         transition: all linear;
         z-index: 100;
-
     }
 
     #quadradoNotificacaoEndereco h1{
@@ -517,7 +844,7 @@
 
     .loaderEndereco {
         position: relative;
-        width: 200px;
+        width: 300px;
         height: 3px;
         background: linear-gradient(to right, transparent, #ff0000, transparent);
         overflow: hidden;

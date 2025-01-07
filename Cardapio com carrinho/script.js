@@ -1,46 +1,137 @@
-const botaoAdicionar  = document.querySelectorAll(".botaoAdicionar");
+// BOTÕES //
+var latas = document.getElementById("latas");
+var garrafas = document.getElementById("garrafas");
+var gin = document.getElementById("GIN");
+var whisky = document.getElementById("whisky");
+var vodka = document.getElementById("vodka");
+
+var quadradoItensgarrafas = document.getElementById("quadradoItensgarrafas");
+var quadradoItenslatas = document.getElementById("quadradoItenslatas");
+var quadradoItensgin = document.getElementById("quadradoItensgin");
+var quadradoItenswhisky = document.getElementById("quadradoItenswhisky");
+var quadradoItensvodka = document.getElementById("quadradoItensvodka");
+
+
+// Seleção de menus //
+// Açai //
+latas.addEventListener("click", function() {
+    latas.style.background = "#FEE502"
+    quadradoItenslatas.style.display = "grid"
+    if (latas) {
+    garrafas.style.background = "transparent" // Garrafas
+    quadradoItensgarrafas.style.display = "none" // Garrafas
+    gin.style.background = "transparent" // Gin
+    quadradoItensgin.style.display = "none" // Gin
+    whisky.style.background = "transparent" // Whisky
+    quadradoItenswhisky.style.display = "none" // Whisky
+    vodka.style.background = "transparent" // Vodka
+    quadradoItensvodka.style.display = "none" // Vodka
+    }
+}); 
+// Garrafas //
+garrafas.addEventListener("click", function() {
+    garrafas.style.background = "#FEE502"
+    quadradoItensgarrafas.style.display = "grid"
+    if (garrafas) {
+        latas.style.background = "transparent" // Latas
+        quadradoItenslatas.style.display = "none" // Latas
+        gin.style.background = "transparent" // Gin
+        quadradoItensgin.style.display = "none" // Gin
+        whisky.style.background = "transparent" // Whisky
+        quadradoItenswhisky.style.display = "none" // Whisky
+        vodka.style.background = "transparent" // Vodka
+        quadradoItensvodka.style.display = "none" // Vodka
+    }
+}); 
+// Gin //
+gin.addEventListener("click", function() {
+    gin.style.background = "#FEE502"
+    quadradoItensgin.style.display = "grid"
+    if (gin) {
+        latas.style.background = "transparent" // Latas
+        quadradoItenslatas.style.display = "none" // Latas
+        garrafas.style.background = "transparent" // Garrafas
+        quadradoItensgarrafas.style.display = "none" // Garrafas
+        whisky.style.background = "transparent" // Whisky
+        quadradoItenswhisky.style.display = "none" // Whisky
+        vodka.style.background = "transparent" // Vodka
+        quadradoItensvodka.style.display = "none" // Vodka
+    }
+});
+
+// Whisky //
+whisky.addEventListener("click", function() {
+    whisky.style.background = "#FEE502"
+    quadradoItenswhisky.style.display = "grid"
+    if (whisky) {
+        latas.style.background = "transparent" // Latas
+        quadradoItenslatas.style.display = "none" // Latas
+        garrafas.style.background = "transparent" // Garrafas
+        quadradoItensgarrafas.style.display = "none" // Garrafas
+        gin.style.background = "transparent" // Gin
+        quadradoItensgin.style.display = "none" // Gin
+        vodka.style.background = "transparent" // Vodka
+        quadradoItensvodka.style.display = "none" // Vodka
+    }
+}); 
+
+// Vodka //
+vodka.addEventListener("click", function() {
+    vodka.style.background = "#FEE502"
+    quadradoItensvodka.style.display = "grid"
+    if (vodka) {
+        latas.style.background = "transparent" // Latas
+        quadradoItenslatas.style.display = "none" // Latas
+        garrafas.style.background = "transparent" // Garrafas
+        quadradoItensgarrafas.style.display = "none" // Garrafas
+        gin.style.background = "transparent" // Gin
+        quadradoItensgin.style.display = "none" // Gin
+        whisky.style.background = "transparent" // Whisky
+        quadradoItenswhisky.style.display = "none" // Whisky
+    }
+}); 
+// Fim da seleção //
+
+// Abre e fecha a sacola //
 var sacola = document.getElementById("sacola");
 var abrirSacola = document.getElementById("abrirSacola");
-var sacolaDentroItens = document.getElementById("sacolaDentroItens");
 var xSacola = document.getElementById("btnxSacola");
-var notificacaoAddSacola = document.getElementById("notificacaoAddSacola");
-var notificacaoRemSacola = document.querySelector("#notificacaoRemSacola");
-var acai = document.getElementById("acai");
-var adicionais = document.getElementById("adicionais");
-var quadradoItensAcai = document.getElementById("quadradoItensAcai");
-var quadradoItensAdicionais = document.getElementById("quadradoItensAdicionais");
-var Total = document.getElementById("total");
-const enviarPedido = document.querySelectorAll("#enviarPedido");
 var notificacaoEndereco = document.getElementById("notificacaoEndereco");
 var endereco = document.getElementById("endereco");
 
 var fechar = false
-var total = 0
+
+sacola.addEventListener("click", function () {
+    abrirSacola.style.display = !fechar ? "flex" : "none";
+    fechar = !fechar;
+});
+
+xSacola.addEventListener("click", function () {
+    abrirSacola.style.display = "none";
+    notificacaoEndereco.style.display = "none";
+    fechar = false;
+});
+
+// Fim do Abre e fecha a sacola //
+
+// Input de endereço //
+endereco.addEventListener("input", function () {
+    if (endereco.value.trim() !== "") {
+        notificacaoEndereco.style.display = "none"; // Esconde a notificação //
+        endereco.style.border = "1.5px solid #000000";
+    }
+});
+
+// ADICIONANDO A SACOLA //
+const botaoAdicionar  = document.querySelectorAll(".botaoAdicionar");
+var sacolaDentroItens = document.getElementById("sacolaDentroItens");
+var notificacaoAddSacola = document.getElementById("notificacaoAddSacola");
+var notificacaoRemSacola = document.querySelector("#notificacaoRemSacola");
+var Total = document.getElementById("total");
 
 var Sacola = []
+var total = 0
 
-// Seleção de menus
-// Açai
-acai.addEventListener("click", function() {
-    acai.style.background = "#ff1f1fb4"
-    quadradoItensAcai.style.display = "flex"
-    if (acai) {
-    adicionais.style.background = "transparent"
-    quadradoItensAdicionais.style.display = "none"
-    }
-}); 
-//Adicionais
-adicionais.addEventListener("click", function() {
-    adicionais.style.background = "#ff1f1fb4"
-    quadradoItensAdicionais.style.display = "flex"
-    if (adicionais) {
-        acai.style.background = "transparent"
-        quadradoItensAcai.style.display = "none"
-    }
-}); 
-// Fim da seleção =================================================================================================================
-
-//Botão de adiciona o item à sacola
 botaoAdicionar.forEach(botao => {
     botao.addEventListener("click", function () {
         let quantidadeID = document.querySelector("#quantidade");
@@ -56,6 +147,7 @@ botaoAdicionar.forEach(botao => {
         notificacaoAddSacola.style.display = "flex";
         if (notificacaoAddSacola.style.display == "flex") {
             notificacaoRemSacola.style.display = "none";
+            notificacaoEndereco.style.display == "none"
         }
         setInterval(() => {
             notificacaoAddSacola.style.display = "none";
@@ -97,6 +189,7 @@ botaoAdicionar.forEach(botao => {
             notificacaoRemSacola.style.display = "flex";
             if (notificacaoRemSacola.style.display === "flex") {
                 notificacaoAddSacola.style.display = "none";
+                notificacaoEndereco.style.display = "none";
             }
             setInterval(() => {
                 notificacaoRemSacola.style.display = "none";
@@ -126,25 +219,10 @@ botaoAdicionar.forEach(botao => {
     });
 });
 
+// FIM DICIONANDO A SACOLA //
 
-// Abre e fecha a sacola
-sacola.addEventListener("click", function () {
-    abrirSacola.style.display = !fechar ? "flex" : "none";
-    fechar = !fechar;
-});
-
-xSacola.addEventListener("click", function () {
-    abrirSacola.style.display = "none";
-    notificacaoEndereco.style.display = "none";
-    fechar = false;
-});
-
-endereco.addEventListener("input", function () {
-    if (endereco.value.trim() !== "") {
-        notificacaoEndereco.style.display = "none"; // Esconde a notificação
-        endereco.style.border = "1.5px solid #000000";
-    }
-});
+// Enviando o pedido //
+const enviarPedido = document.querySelectorAll("#enviarPedido");
 
 enviarPedido.forEach(botao => {
     botao.addEventListener("click", function () {
@@ -172,6 +250,11 @@ enviarPedido.forEach(botao => {
         } else {
             notificacaoEndereco.style.display = "flex"; // Exibe a notificação
             endereco.style.border = "1.5px solid red";
+        }
+
+        if (notificacaoEndereco.style.display === "flex") {
+            notificacaoAddSacola.style.display = "none";
+            notificacaoRemSacola.style.display = "none"
         }
     });
 });
