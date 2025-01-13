@@ -98,6 +98,7 @@ var abrirSacola = document.getElementById("abrirSacola");
 var xSacola = document.getElementById("btnxSacola");
 var notificacaoEndereco = document.getElementById("notificacaoEndereco");
 var endereco = document.getElementById("endereco");
+var numeroCasa = document.getElementById("numeroCasa");
 
 var fechar = false
 
@@ -235,7 +236,7 @@ enviarPedido.forEach(botao => {
         const totalSacola = Sacola.reduce((acc, item) => acc + (item.price * item.quantity), 0);
 
         // Monta a mensagem do pedido
-        const mensagem = encodeURIComponent(`Pedido:\n${pedido}\n\nTotal: R$ ${totalSacola.toFixed(2)}\nEndereço: ${endereco.value}`);
+        const mensagem = encodeURIComponent(`Pedido:\n${pedido}\n\nTotal: R$ ${totalSacola.toFixed(2)}\nEndereço: ${endereco.value}, ${numeroCasa.value}`);
 
         // Verifica se o endereço foi preenchido
         if (endereco.value && endereco.value.trim() !== "") {
