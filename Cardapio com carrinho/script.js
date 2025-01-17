@@ -117,9 +117,18 @@ xSacola.addEventListener("click", function () {
 
 // Input de endereço //
 endereco.addEventListener("input", function () {
-    if (endereco.value.trim() !== "") {
+    if (endereco.value.trim() !== "" && numeroCasa.value.trim() !== "") {
         notificacaoEndereco.style.display = "none"; // Esconde a notificação //
         endereco.style.border = "1.5px solid #000000";
+        numeroCasa.style.border = "1.5px solid #000000";
+    }
+});
+
+numeroCasa.addEventListener("input", function () {
+    if (endereco.value.trim() !== "" && numeroCasa.value.trim() !== "") {
+        notificacaoEndereco.style.display = "none"; // Esconde a notificação //
+        endereco.style.border = "1.5px solid #000000";
+        numeroCasa.style.border = "1.5px solid #000000";
     }
 });
 
@@ -233,13 +242,13 @@ enviarPedido.forEach(botao => {
         const pedido = Sacola.map(item => `${item.quantity}x ${item.name} `).join("\n");
 
         // Calcula o total da sacola
-        const totalSacola = Sacola.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+        const totalSacola = Sacola.reduce((acc, item) => acc + (item.price * item.quantity + 5), 0);
 
         // Monta a mensagem do pedido
         const mensagem = encodeURIComponent(`Pedido:\n${pedido}\n\nTotal: R$ ${totalSacola.toFixed(2)}\nEndereço: ${endereco.value}, ${numeroCasa.value}`);
 
         // Verifica se o endereço foi preenchido
-        if (endereco.value && endereco.value.trim() !== "") {
+        if (endereco.value && endereco.value.trim() !== "" && numeroCasa.value && numeroCasa.value.trim() !== "") {
             window.open(`https://api.whatsapp.com/send?phone=5512988203607&text=${mensagem}`, "_blank");
             sacolaDentroItens.innerHTML = ""; // Limpa a sacola
             quantidadeCLASS.innerHTML = 0; // Limpa a quantidade
@@ -248,9 +257,11 @@ enviarPedido.forEach(botao => {
             total = 0; // Limpa o total
             Sacola = []; // Limpa o array Sacola
             endereco.value = "";
+            numeroCasa.value = "";
         } else {
             notificacaoEndereco.style.display = "flex"; // Exibe a notificação
             endereco.style.border = "1.5px solid red";
+            numeroCasa.style.border = "1.5px solid red";
         }
 
         if (notificacaoEndereco.style.display === "flex") {

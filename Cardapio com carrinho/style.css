@@ -958,6 +958,13 @@
         color: #000;
         text-shadow: 1px 1px 1px #fff;
     }
+
+    #taxa {
+        position: absolute;
+        top: 2.5rem;
+        left: 12rem;
+        font-size: 9pt;
+    }
 }
 
 @media (min-width: 430px) and (max-width:767px) {
